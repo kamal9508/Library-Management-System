@@ -1,0 +1,12 @@
+
+[project]
+name = "library-management-system"
+version = "0.1.0"
+description = "Library Management System with Array and LinkedList backends"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{name="Your Name"}]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
