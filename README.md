@@ -1,4 +1,3 @@
-
 # Library Management System (Python)
 
 A simple, testable Library Management System that showcases **two data structure backends**:
@@ -36,72 +35,3 @@ python -m library.cli
 
 # Or use the linked list backend
 python -m library.cli --backend linkedlist
-```
-
-### CLI Examples
-
-```bash
-# Add a member
-python -m library.cli --add-member "Alice"
-
-# Add a book
-python -m library.cli --add-book "Clean Code" "Robert C. Martin" 2008
-
-# List all books
-python -m library.cli --list-books
-
-# Search books by title or author (substring, case-insensitive)
-python -m library.cli --search-book clean
-
-# Borrow a book
-python -m library.cli --borrow "Alice" "Clean Code"
-
-# Return a book
-python -m library.cli --return "Alice" "Clean Code"
-```
-
----
-
-## Project Structure
-
-```
-Library-Management-System/
-├─ src/
-│  └─ library/
-│     ├─ __init__.py
-│     ├─ models.py
-│     ├─ storage.py
-│     ├─ array_repo.py
-│     ├─ linkedlist_repo.py
-│     ├─ service.py
-│     └─ cli.py
-├─ tests/
-│  └─ test_service.py
-├─ requirements.txt
-├─ pyproject.toml
-└─ LICENSE
-```
-
----
-
-## Design Notes
-
-- `storage.py` defines the **StorageProtocol** interface used by the service.
-- `array_repo.py` implements storage using Python lists (dynamic arrays).
-- `linkedlist_repo.py` implements a simple **singly linked list** with nodes.
-- `service.py` is the **business layer** with validations for borrow/return.
-- `cli.py` wires it all together and provides a minimal command-line interface.
-
----
-
-## Running Tests
-
-```bash
-pytest -q
-```
-
----
-
-## License
-
-MIT
